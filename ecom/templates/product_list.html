@@ -1,0 +1,35 @@
+{% extends "base.html" %}
+{% block content %}
+{% load static %}
+<section class="fram-desing" data-aos="fade-down">
+  <div class="container-fluid">
+      <div class="col-md-12">
+        <div class="gallary_slider text-center"> 
+          <div class="owl-carousel owl-theme  GallerySlide">
+            <div class="item bannerItemga">
+              <div class="row">
+              {% for product in products%}
+                <div class="col-md-4 col-sm-4 col-12">
+                  <div class="main-cfy-box">
+                    <div class="prduct-sort">
+                      <img src={{product.upload.url}} alt="">
+                    </div>
+                    <div class="product-contnt">
+                      <p>{{product.product_name}} ${{product.price}}</p>
+                 <a href="{% url 'product_detail' product.slug %}" class="btn btn-primary">Add to cart</a>
+
+                    </div>
+                  </div>
+                </div>
+              {% endfor %}
+          <!-- ==============column four end======= -->
+              </div>
+            </div>
+          <!-- ==============2 nd item =========== -->
+
+          <!-- ==============2 nd item =========== -->
+           
+    </div>
+  </div>
+</section>
+{% endblock %}

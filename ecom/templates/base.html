@@ -1,0 +1,334 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <title>eyesoptical</title>
+      <!-- <link rel="icon" href="assets/images/logo.png"> -->
+      <link rel='stylesheet' href="{% static 'assets/css/bootstrap.min.css' %}" type='text/css' media='all'/>
+      <link rel='stylesheet' href="{% static 'assets/css/owl.carousel.min.css' %}" type='text/css' media='all'/>
+      <link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+      <link rel='stylesheet' href="{% static 'assets/css/aos.css' %}" type='text/css' media='all'/>
+      <link rel='stylesheet' href="{% static 'assets/css/style.css' %}" type='text/css' media='all'/>
+      	
+	<link rel="stylesheet" href="{% static 'assets/css/animation.css' %}">
+    <!-- Google Font -->
+	<link href="https://fonts.googleapis.com/css?family=Poppins&display=swap" rel="stylesheet">
+	<!-- font Awesoem  -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css">
+   </head>
+  <body>
+
+<!-- =============HEADER start============== -->
+<!-- =============HEADER start============== -->
+<div class="top-header py-2">
+  <div class="container-fluid">
+    <div class="row">
+        <div class="top-informaion">
+          <p class="text-white m-0 mr-3">2-Day Delivery - Get your new glasses faster than ever!</p>
+          <a href="#" class="shop-link">Shop Now</a>
+          <a href="#" class="top-link">Terms & Conditions</a>
+          <a href="#" class="top-link access">Enable Accessebility</a>
+        </div>
+        </div>
+    </div>
+  </div>
+
+<header id="sticky-nav">
+  <div class="Menu_head">
+    <div class="container-fluid">
+      <nav id='cssmenu' class="navigation">
+        <div id="head-mobile"></div>
+        <div class="button"></div>
+       <ul>
+          <li class="has-sub"><span class="submenu-button"></span><a href="/">Eyeglasses</a>
+            <ul class="sub-menu">
+              <li><a href="Eyeglasses.html">Mixte's Eyeglasses</a></li>
+              <li><a href="Eyeglasses.html">Woman's Eyeglasses</a></li>
+              <li><a href="Eyeglasses.html">Men's Eyeglasses</a></li>
+              <li><a href="Eyeglasses.html">Kids's Eyeglasses</a></li>
+              <li><a href="Eyeglasses.html">Special Offers</a></li>
+            </ul>
+          </li>
+          <li><a href="sunglasses.html">Sunglasses</a></li>
+          <li><a href="">Trends</a></li>
+          <li><a href="">Discover</a></li>
+          
+        </ul>
+      </nav>
+      <div class="logo-brand">
+        <a class="navbar-brand text-center" href="/"><img src="{% static 'assets/images/logo.png' %}" class="img-fluid" /></a>
+      </div>
+      
+      <div class="book-appointment">
+        <ul class="navbar-right right_nav left-wap">
+          <li class="nav-item">
+            <a href="#" class="nav-link"> <i class="fa fa-search"></i> </a>
+          </li>
+          <li class="nav-item">
+            <a href="#" class="nav-link"> <i class="fa fa-user"></i> </a>
+          </li>
+          <li class="nav-item">
+            <a href="#" class="nav-link"> <i class="fa fa-heart"></i> </a>
+          </li>
+          <li class="nav-item">
+            <a href="#" class="nav-link"> <i class="fa fa-shopping-bag"></i> </a>
+          </li>
+          <li class="nav-item">
+            <a href="#" class="nav-link"> <img src="assets/images/eng.png" alt="">EN </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</header> 
+
+{% block content %}{% endblock %}
+  
+  <footer class="page-footer">
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-lg-2 col-md-2 footer-col">
+          <h3 class="text-white footer-heading">Follow Us</h3>
+          <p class="text-white">Recieve 20% Off on your order <br /> when tou sign-up</p>
+          <ul class="social-icons list-inline">
+            <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+            <li><a href="#"><i class="fa fa-instagram"></i></a></li>
+            <li><a href="#"><i class="fa fa-youtube"></i></a></li>
+          </ul>
+        </div>
+        <div class="col-lg-2 col-md-2 footer-col">
+          <h3 class="text-white footer-heading">Shop</h3>
+          <ul class="footer-page-list">
+            <li><a href="#">Women's Eyeglasses</a></li>
+            <li><a href="#">Men's Eyeglasses</a></li>
+            <li><a href="#">Affordable Glasses</a></li>
+            <li><a href="#">Sale</a></li>
+            <li><a href="#">Gift Card</a></li>
+            <li><a href="#">Blue-Light Lenses</a></li>
+            <li><a href="#">Progressive Lenses</a></li>
+            <li><a href="#">Bifocal Lenses</a></li>
+            <li><a href="#">Prism Lenses</a></li>
+            <li><a href="#">Discount Coupons</a></li>
+          </ul>
+        </div>
+        <div class="col-lg-2 col-md-2 footer-col">
+          <h3 class="text-white footer-heading">Tips & Guide</h3>
+          <ul class="footer-page-list">
+            <li><a href="#">Fit & Style Eyewear Quiz</a></li>
+            <li><a href="#">How to order glasses online?</a></li>
+            <li><a href="#">How to read a prescription</a></li>
+            <li><a href="#">Frames for your face shape</a></li>
+            <li><a href="#">Eye care tips</a></li>
+            <li><a href="#">Help & FAQs</a></li>
+            <li><a href="#">Find an eye doctor</a></li>
+            <li><a href="#">Accessibility statement</a></li>
+          </ul>
+        </div>
+        <div class="col-lg-2 col-md-2 footer-col">
+          <h3 class="text-white footer-heading">About</h3>
+          <ul class="footer-page-list">
+            <li><a href="#">About Us</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+            <li><a href="#">Buy 1 give 1</a></li>
+            <li><a href="#">Shipping & Return</a></li>
+            <li><a href="#">Site map</a></li>
+            <li><a href="blog.html">Our Blog</a></li>
+            <li><a href="#">Our Mission/Vision</a></li>
+          </ul>
+        </div>
+        <div class="col-lg-2 col-md-2 footer-col">
+          <h3 class="text-white footer-heading">Discover</h3>
+          <ul class="footer-page-list">
+            <li><a href="#">Referral Program</a></li>
+            <li><a href="#">Loyalty Progarm</a></li>
+            <li><a href="#">Affiliate Program</a></li>
+            <li><a href="#">Student Discount</a></li>
+            <li><a href="#">Veteren Discount</a></li>
+            <li><a href="#">Real life looks</a></li>
+          </ul>
+        </div>
+        <div class="col-md-12 m-auto">
+          <div class="copyright">
+            <p class="text-center text-white mt-5">© 2020 Copyright. All Rights Reserved.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+
+
+<div class="footer-content">
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-md-12">
+        <div class="privacy-content">
+          <p>"Bienvenue chez polette.com, l’opticien en ligne qui permet de vous offrir des lunettes de vue et des lunettes de soleil alliant qualité et prix pas cher.</p>
+          <p>En supprimant l’ensemble des intermédiaires, polette.com vous offre l’opportunité d’acheter vos montures ainsi que vos verres correcteurs directement de ses usines. Ainsi, en maîtrisant l’ensemble de ses processus de production, polette.com, l’opticien en ligne, est en mesure de vous proposer des lunettes de vue pas chères et des lunettes de soleil pas chères dont les prix défient toute concurrence (vous ne trouverez pas un opticien traditionnel ou un opticien en ligne moins cher) et d’une qualité exceptionnelle. Pour la fabrication de ses montures, outre le fait qu’elles ont été toutes conçues par ses équipes de designers, polette.com n’utilise que des matériaux nobles tels que l’acétate, le titane, le bois et le métal. polette.com l’opticien-lunetier en ligne aime la mode. Vous trouverez donc nécessairement des montures à votre goût : des lunettes pour hommes, des lunettes pour femmes, des lunettes pour enfants, des lunettes tendances, des lunettes fashion, des lunettes rétro, des lunettes vintages, des lunettes rondes, des lunettes ovales, des lunettes aviateurs, des lunettes rectangles, des lunettes demi-cerclées, des lunettes papillons, des lunettes sans correction, des lunettes en acétate, des lunettes en titane, des lunettes en métal, mais aussi des lunettes pour le style.</p>
+          <p>Par ailleurs, polette.com, l’opticien en ligne pas cher vous permet d’adapter les montures à votre style, à vos envies et à vos besoins. En effet, avec polette.com, l’opticien en ligne, vous pouvez personnaliser toutes vos lunettes et bénéficier des traitements de dernières générations, verres à la vue, verres anti lumière bleue, verres colorés, verres miroirs et verres photochromiques. polette.com vous permet de corriger tous les problèmes de vue pour les prix les plus compétitifs du marché. Ainsi, vous pouvez acheter en ligne des montures avec des verres de lunettes pas cher contre la myopie, des verres de lunettes pas cher contre l’hypermétropie, de verres de lunettes pas cher contre l’astigmatisme et des verres de lunettes pas cher contre la presbytie tout en bénéficiant d’une qualité exceptionnelle.</p>
+          <p>polette.com propose une large gamme de verres unifocaux de dernières générations à partir de 10 €, des verres progressifs à champ large de dernière génération à partir de 30 €. Tous nos verres sont taillés et montés dans nos laboratoires par des opticiens diplômés et disposent d'un traitement antireflets gratuit, anti-rayures gratuit et protections UV 400 gratuit. polette.com votre opticien en ligne propose également des verres de lunettes amincis, des verres de lunettes teintés –verres de lunettes noirs, verres de lunettes marrons, verres de lunettes verts, verres de lunettes bleus, verres de lunettes jaunes, verres de lunettes roses, verres de lunettes rouges, verres de lunettes oranges, verres de lunettes violets- vous pourrez également personnaliser votre monture avec des verres de lunettes miroirs de différents coloris, des verres photochromiques marrons, des verres photochromiques noirs ou des verres de lunettes protecteur contre la lumière bleue.</p>
+          <p>L’achat de vos nouvelles lunettes se fait en toute sérénité puisqu’acheter ses lunettes sur internet est aussi fiable que d’aller les acheter chez un opticien traditionnel et surtout moins cher. Et n’hésitez pas à nous contacter pour toutes informations ou à vous rendre dans le showroom de polette.com de Paris, le showroom de polette.com de Lille, le showroom de polette.com de Bruxelles, le showroom de polette.com d’Amsterdam et le showroom de polette.com d’Utrecht."</p>
+          
+        </div>
+      </div>
+      
+    </div>
+    
+  </div>
+  
+</div>
+
+<!--========footer end=============-->
+  <script src="{% static 'assets/js/jquery-min.js' %}"></script>
+  <script src="{% static 'assets/js/bootstrap.min.js' %}"></script>
+  <script src="{% static 'assets/js/aos.js' %}"></script>
+  <script type='text/javascript' src="{% static 'assets/js/owl.carousel.min.js' %}"></script>
+  <script type="text/javascript">
+    (function ($) {
+  $.fn.menumaker = function (options) {
+    var cssmenu = $(this),
+      settings = $.extend({
+        format: "dropdown",
+        sticky: false
+      }, options);
+    return this.each(function () {
+      $(this).find(".button").on('click', function () {
+        $(this).toggleClass('menu-opened');
+        var mainmenu = $(this).next('ul');
+        if (mainmenu.hasClass('open')) {
+          mainmenu.slideToggle().removeClass('open');
+        } else {
+          mainmenu.slideToggle().addClass('open');
+          if (settings.format === "dropdown") {
+            mainmenu.find('ul').show();
+          }
+        }
+      });
+      cssmenu.find('li ul').parent().addClass('has-sub');
+      multiTg = function () {
+        cssmenu.find(".has-sub").prepend('<span class="submenu-button"></span>');
+        cssmenu.find('.submenu-button').on('click', function () {
+          $(this).toggleClass('submenu-opened');
+          if ($(this).siblings('ul').hasClass('open')) {
+            $(this).siblings('ul').removeClass('open').slideToggle();
+          } else {
+            $(this).siblings('ul').addClass('open').slideToggle();
+          }
+        });
+      };
+      if (settings.format === 'multitoggle') multiTg();
+      else cssmenu.addClass('dropdown');
+      if (settings.sticky === true) cssmenu.css('position', 'fixed');
+      resizeFix = function () {
+        var mediasize = 1000;
+        if ($(window).width() > mediasize) {
+          cssmenu.find('ul').show();
+        }
+        if ($(window).width() <= mediasize) {
+          cssmenu.find('ul').hide().removeClass('open');
+        }
+      };
+      resizeFix();
+      return $(window).on('resize', resizeFix);
+    });
+  };
+})(jQuery);
+
+(function ($) {
+  $(document).ready(function () {
+    $("#cssmenu").menumaker({
+      format: "multitoggle"
+    });
+  });
+})(jQuery);
+  </script>
+  <script type="text/javascript">
+    AOS.init({
+  duration: 2000,
+});
+$('.BannerSlide').owlCarousel({
+  loop: true,
+  nav: false,
+  autoplay:true,
+  navText: ["<img src='assets/images/prev.png'>", "<img src='assets/images/next.png'>"],
+  responsive: {
+    0: {
+      items: 1
+    },
+    600: {
+      items: 1
+    },
+    1000: {
+      items: 1
+    }
+  }
+});
+$('.GallerySlide').owlCarousel({
+  loop: true,
+  nav: true,
+  // autoplay:true,
+  smartSpeed: 1000,
+  margin: 20,
+  responsive: {
+    0: {
+      items: 1
+    },
+    600: {
+      items: 1
+    },
+    1000: {
+      items: 1
+    }
+  },
+  navText: ["<img src='assets/images/prev2.png'>", "<img src='assets/images/next2.png'>"],
+});
+$("#reference_slider").owlCarousel({
+  loop: true,
+  nav: false,
+  margin: 20,
+  responsive: {
+    0: {
+      items: 1
+    },
+    600: {
+      items: 2
+    },
+    1000: {
+      items: 3
+    },
+    1600: {
+      items: 3
+    }
+  },
+  navText: ["<img src='assets/images/prev3.png'>", "<img src='assets/images/next3.png'>"],
+});
+  </script>
+
+  <script type="text/javascript">
+    $(window).scroll(function() {
+      var scroll = $(window).scrollTop();
+
+      if (scroll >= 50) {
+          $(".Menu_head").addClass("header-menu_fixed");
+      }
+      else {
+          $(".Menu_head").removeClass("header-menu_fixed");
+      }
+      if (scroll >= 700) {
+          $(".Menu_head2").addClass("filter-menu_fixed");
+      }
+      else {
+          $(".Menu_head2").removeClass("filter-menu_fixed");
+      }
+  });
+  </script>
+  
+
+  </body>
+</html>
+
+
+

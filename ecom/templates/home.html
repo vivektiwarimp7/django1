@@ -1,0 +1,64 @@
+{% extends "base.html" %}
+{% block content %}
+{% load static %}
+<section class="fram-desing" data-aos="fade-down">
+  <div class="container-fluid">
+    <div class="damitext text-center">
+      <img src="assets/images/text.png" alt="">
+    </div>
+    <div class="row">
+      <div class="col-md-6 text-right">
+        <div class="fram-wap mr-5">
+          <img src="assets/images/eyeglass.png">
+        </div>
+        <div class="glass-content">
+          <p>Eyeglasses</p>
+        </div>
+      </div>
+      <div class="col-md-6 text-left">
+        <div class="fram-wap ml-5">
+          <img src="assets/images/eyeglass2.png">
+        </div>
+        <div class="glass-content">
+          <p>Sunglasses</p>
+        </div>
+      </div>
+      <div class="col-md-12 text-center">
+        <div class="bestceller">
+          <h1 class="mb-4">Beautiful eyewear, Better by design.</h1>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+          <a href="" class="bestceller2">BESTSELLER</a>
+        </div>
+      </div>
+      <div class="col-md-12">
+        <div class="gallary_slider text-center"> 
+          <div class="owl-carousel owl-theme  GallerySlide">
+            <div class="item bannerItemga">
+              <div class="row">
+              {% for product in products%}
+                <div class="col-md-4 col-sm-4 col-12">
+                  <div class="main-cfy-box">
+                    <div class="prduct-sort">
+                      <img src={{product.upload.url}} alt="">
+                    </div>
+                    <div class="product-contnt">
+                      <p>{{product.product_name}} ${{product.price}}</p>
+                      <a href="{{product.id}}" class="pro-bunt">Add to cart</a>
+                    </div>
+                  </div>
+                </div>
+        {% endfor %}
+          <!-- ==============column four end======= -->
+              </div>
+            </div>
+          <!-- ==============2 nd item =========== -->
+
+          <!-- ==============2 nd item =========== -->
+           </div>
+        </div>
+        
+      </div>
+    </div>
+  </div>
+</section>
+{% endblock %}

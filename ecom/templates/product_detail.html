@@ -1,0 +1,469 @@
+{% extends "base.html" %}
+{% block content %}
+{% load static %}
+
+    <section id="single-product_container">
+      <div class="container-fluid">
+        <div class="row mt-5">
+          <div class="col-lg-7 col-md-12">
+            <div class="row">
+              <div class="col-lg-10 col-md-9">
+                <!-- Sorry! Lightbox doesn't work - yet. -->
+                <div id="myCarousel" class="single-thumbs-slider carousel slide" data-ride="carousel">
+                  <div class="carousel-inner">
+                  {% for p in photos %}
+                    <div class="carousel-item {% if forloop.counter0 == 0 %} active {% endif %}" data-slide-number="{{forloop.counter0}}">
+                      <figure>
+                        <div id="product-image">
+                          <a href="{{p.images.url}}">
+                            <img class="cloudzoom"src="{{p.images.url}}"alt=""data-cloudzoom="zoomPosition:'inside',zoomOffsetX:0,zoomFlyOut:false,variableMagnification:false,disableZoom:'auto',touchStartDelay:100,propagateGalleryEvent:true">
+                          </a>
+                        </div>
+                      </figure>
+                    </div>
+                 {% endfor %}
+                 
+                  </div>
+                </div>
+                <div class="proing text-center">
+                  <a href="" class="pro-bunt2">Try on</a>
+                </div>
+                <div class="color-filter text-center">
+                  <h3 class="h3 text-back mr-3">Other Colors</h3>
+                  <div class="color-variations">
+                    <a href=""><span class="color-brown"></span></a>
+                    <a href=""><span class="color-black"></span></a>
+                    <a href="" class="active"><span class="color-gray"></span></a>
+                  </div>
+                </div>
+                <div class="product-warranty">
+                    <p>2 year warranty on your frame and lenses. Incluing free anti-reflective, anti-scratch and UV400 lenses.</p>
+                </div>
+              </div>
+              <div class="col-lg-2 col-md-3 p-0">
+                <!-- Carousel Navigation -->
+                <div id="carousel-thumbs" class="carousel slide" data-ride="carousel">
+                  <div class="carousel-inner">
+
+                 
+
+
+                    <div class="carousel-item active">
+                      <div class="row mx-0">
+                        {% for p in photos %}
+                        <div id="carousel-selector-{{forloop.counter0}}" class="thumb col-12 col-sm-12 px-1 py-2 selected" data-target="#myCarousel" data-slide-to="{{forloop.counter0}}">
+                          <img src="{{p.images.url}}" class="img-fluid" alt="...">
+                        </div>
+                        {% endfor %}
+                       
+              
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-7" style="display: none;">
+            <div class="singale-imag">
+               {% for p in photos %}
+              <img src="{% if forloop.counter0 == 0 %} {{p.images.url}} {% endif %}" class="d-block" alt="..." data-remote="" data-type="image" data-toggle="lightbox" data-gallery="example-gallery">
+             {% endfor%}
+            </div>
+          </div>
+
+
+          <div class="col-11 col-sm-5 col-md-5 col-lg-5 col-xl-5 p-0 mb-2">
+            <div class="card px-0 pb-0 mb-3">
+              <form id="msform">
+                <!-- progressbar -->
+                <ul id="progressbar">
+                    <li class="active" id="account"><strong>Frame</strong></li>
+                    <li id="personal"><strong>Prescription</strong></li>
+                    <li id="confirm"><strong>Order</strong></li>
+                </ul>
+          <!-- fieldsets -->
+                <fieldset class="px-5">
+                  <div class="col-lg-12 p-0">
+                    <div class="p-block">
+                      <h3 class="h3 mb-3 text-back font-weight-bold float-left">{{product.product_name}}</h3>
+                      <h2 class="h2 mb-3 text-carrot text-right">${{product.price}}</h2>
+                      <div class="p-content text-black mt-5">
+                        <p>Love at first sight, Larkin is all we think of. Beautifully painted in electric blue, this charming frame features rectangular shapes. A collector's item with excellent quality and will capture your attention!</p>
+                        <p>An easy to wear model witn a touch of originality.</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-md-12 p-0">
+                    <div id="wapper">
+                      <div class="style1">
+                        <div class="a-dropdown">
+                          <select name="dropdown" id="dropdown" class="a-dropdown__select">
+                            <option value="" disabled selected hidden>Lenses type</option>
+                              <option value="2">Without prescription</option>
+                              <option value="3">$10 -Near vision</option>
+                              <option value="3">$10 -Near vision ( + )</option>
+                              <option value="3">$60 -Near vision ( + )</option>
+                            </select>
+                            <svg data-v-7e3f3806="" class="a-dropdown__arrow icon icon-chevron" version="1.1" role="presentation" width="10.714285714285714" height="10.714285714285714" viewBox="0 0 1200 1200" class="arrow-down-icon svg-icon active"><path d="M0,125.407l600,949.186l600-949.186H0z" stroke="transparent"></path></svg>
+                           </div>
+                      </div>
+                      <div id="event-change"></div>
+                    </div>
+                  </div>
+                    <input type="button" name="Validate" class="next action-button" value="Validate" />
+                </fieldset>
+                <fieldset class="px-5">
+                  <div class="p-block">
+                    <h3 class="h3 mb-3 text-back font-weight-bold float-left">Larkin</h3>
+                    <h2 class="h2 mb-3 text-carrot text-right">$139.99</h2>
+                  </div>
+                  <div class="form-card">
+                    <div class="row">
+                      <div class="col-md-12">
+                        <div class="row">
+                          <div class="col-md-4"></div>
+                          <div class="col-md-4">
+                            <div class="dami-texting">
+                              <h4>OD (Right eye)</h4>
+                            </div>
+                          </div>
+                          <div class="col-md-4">
+                            <div class="dami-texting">
+                              <h4>OS (Left eye)</h4>
+                            </div>
+                          </div>
+
+                        </div>
+                        <div class="row">
+                          <div class="col-4">
+                            <div class="form-group">
+                              <label class="col-form-label font-bold">Sphere</label>
+                            </div>
+                          </div> 
+                          <div class="col-4">
+                            <div class="form-group">
+                              <select name="prescription[form][reSphere]" class="custom-select">
+                                <option value="10">+10.00</option>
+                                <option value="9.75">+9.75</option>
+                                <option value="9.5">+9.50</option>
+                                <option value="9.25">+9.25</option>
+                                <option value="9">+9.00</option>
+                                <option value="8.75">+8.75</option>
+                                <option value="8.5">+8.50</option>
+                                <option value="8.25">+8.25</option>
+                                <option value="8">+8.00</option>
+                                <option value="7.75">+7.75</option>
+                                <option value="7.5">+7.50</option>
+                                <option value="7.25">+7.25</option>
+                                <option value="7">+7.00</option>
+                                <option value="6.75">+6.75</option>
+                                <option value="6.5">+6.50</option>
+                              </select>
+                            </div>
+                          </div>
+
+
+                          <div class="col-4">
+                            <div class="form-group">
+                              <select name="prescription[form][leSphere]" class="custom-select">
+                                <option value="10">+10.00</option>
+                                <option value="9.75">+9.75</option>
+                                <option value="9.5">+9.50</option>
+                                <option value="9.25">+9.25</option>
+                                <option value="9">+9.00</option>
+                                <option value="8.75">+8.75</option>
+                                <option value="8.5">+8.50</option>
+                                <option value="8.25">+8.25</option>
+                                <option value="8">+8.00</option>
+                                <option value="7.75">+7.75</option>
+                                <option value="7.5">+7.50</option>
+                                <option value="7.25">+7.25</option>
+                                <option value="7">+7.00</option>
+                                <option value="6.75">+6.75</option>
+                                <option value="6.5">+6.50</option>
+                              </select>
+                            </div>
+                          </div>
+                        </div>
+                        
+                        <div class="row">
+                          <div class="col-4">
+                            <div class="form-group">
+                              <label class="col-form-label font-bold">Cylinder</label>
+                            </div>
+                          </div> 
+                          <div class="col-4">
+                            <div class="form-group">
+                              <select name="prescription[form][reSphere]" class="custom-select">
+                                <option value="10">+10.00</option>
+                                <option value="9.75">+9.75</option>
+                                <option value="9.5">+9.50</option>
+                                <option value="9.25">+9.25</option>
+                                <option value="9">+9.00</option>
+                                <option value="8.75">+8.75</option>
+                                <option value="8.5">+8.50</option>
+                                <option value="8.25">+8.25</option>
+                                <option value="8">+8.00</option>
+                                <option value="7.75">+7.75</option>
+                                <option value="7.5">+7.50</option>
+                                <option value="7.25">+7.25</option>
+                                <option value="7">+7.00</option>
+                                <option value="6.75">+6.75</option>
+                                <option value="6.5">+6.50</option>
+                              </select>
+                            </div>
+                          </div>
+
+
+                          <div class="col-4">
+                            <div class="form-group">
+                              <select name="prescription[form][leSphere]" class="custom-select">
+                                <option value="10">+10.00</option>
+                                <option value="9.75">+9.75</option>
+                                <option value="9.5">+9.50</option>
+                                <option value="9.25">+9.25</option>
+                                <option value="9">+9.00</option>
+                                <option value="8.75">+8.75</option>
+                                <option value="8.5">+8.50</option>
+                                <option value="8.25">+8.25</option>
+                                <option value="8">+8.00</option>
+                                <option value="7.75">+7.75</option>
+                                <option value="7.5">+7.50</option>
+                                <option value="7.25">+7.25</option>
+                                <option value="7">+7.00</option>
+                                <option value="6.75">+6.75</option>
+                                <option value="6.5">+6.50</option>
+                              </select>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="row">
+                          <div class="col-4">
+                            <div class="form-group">
+                              <label class="col-form-label font-bold">Axis</label>
+                            </div>
+                          </div> 
+                          <div class="col-4">
+                            <div class="form-group">
+                              <select name="prescription[form][reSphere]" class="custom-select">
+                                <option value="10">+10.00</option>
+                                <option value="9.75">+9.75</option>
+                                <option value="9.5">+9.50</option>
+                                <option value="9.25">+9.25</option>
+                                <option value="9">+9.00</option>
+                                <option value="8.75">+8.75</option>
+                                <option value="8.5">+8.50</option>
+                                <option value="8.25">+8.25</option>
+                                <option value="8">+8.00</option>
+                                <option value="7.75">+7.75</option>
+                                <option value="7.5">+7.50</option>
+                                <option value="7.25">+7.25</option>
+                                <option value="7">+7.00</option>
+                                <option value="6.75">+6.75</option>
+                                <option value="6.5">+6.50</option>
+                              </select>
+                            </div>
+                          </div>
+
+
+                          <div class="col-4">
+                            <div class="form-group">
+                              <select name="prescription[form][leSphere]" class="custom-select">
+                                <option value="10">+10.00</option>
+                                <option value="9.75">+9.75</option>
+                                <option value="9.5">+9.50</option>
+                                <option value="9.25">+9.25</option>
+                                <option value="9">+9.00</option>
+                                <option value="8.75">+8.75</option>
+                                <option value="8.5">+8.50</option>
+                                <option value="8.25">+8.25</option>
+                                <option value="8">+8.00</option>
+                                <option value="7.75">+7.75</option>
+                                <option value="7.5">+7.50</option>
+                                <option value="7.25">+7.25</option>
+                                <option value="7">+7.00</option>
+                                <option value="6.75">+6.75</option>
+                                <option value="6.5">+6.50</option>
+                              </select>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="row ">
+                          <div class="col-4">
+                            <div class="form-group">
+                              <label class="col-form-label font-bold">Pupillary distance</label>
+                            </div>
+                          </div> 
+                          <div class="col-4">
+                            <div class="form-group">
+                              <select name="prescription[form][reSphere]" class="custom-select">
+                                <option value="10">+10.00</option>
+                                <option value="9.75">+9.75</option>
+                                <option value="9.5">+9.50</option>
+                                <option value="9.25">+9.25</option>
+                                <option value="9">+9.00</option>
+                                <option value="8.75">+8.75</option>
+                                <option value="8.5">+8.50</option>
+                                <option value="8.25">+8.25</option>
+                                <option value="8">+8.00</option>
+                                <option value="7.75">+7.75</option>
+                                <option value="7.5">+7.50</option>
+                                <option value="7.25">+7.25</option>
+                                <option value="7">+7.00</option>
+                                <option value="6.75">+6.75</option>
+                                <option value="6.5">+6.50</option>
+                              </select>
+                            </div>
+                          </div>
+
+
+                          <div class="col-4">
+                            <div class="form-group">
+                              <select name="prescription[form][leSphere]" class="custom-select">
+                                <option value="10">+10.00</option>
+                                <option value="9.75">+9.75</option>
+                                <option value="9.5">+9.50</option>
+                                <option value="9.25">+9.25</option>
+                                <option value="9">+9.00</option>
+                                <option value="8.75">+8.75</option>
+                                <option value="8.5">+8.50</option>
+                                <option value="8.25">+8.25</option>
+                                <option value="8">+8.00</option>
+                                <option value="7.75">+7.75</option>
+                                <option value="7.5">+7.50</option>
+                                <option value="7.25">+7.25</option>
+                                <option value="7">+7.00</option>
+                                <option value="6.75">+6.75</option>
+                                <option value="6.5">+6.50</option>
+                              </select>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-md-12">
+                       <div class="custom_radio">
+                          <input type="radio" id="featured-1" name="featured" checked><label for="featured-1">Half pupillary distance</label>
+                          <br>
+                          <input type="radio" id="featured-2" name="featured"><label for="featured-2">Total pupillary distance</label>
+                          <br>
+                          <input type="radio" id="featured-3" name="featured"><label for="featured-3">Add prism</label>
+                        </div>
+                      </div>
+                    </div> 
+                  </div> <input type="button" name="next" class="next action-button" value="Validate" />
+                  <!-- <button type="button" class="action-button previous previous_button">Back</button> -->
+                </fieldset>
+
+                <fieldset class="px-5">
+                  <div class="p-block">
+                    <h3 class="h3 mb-3 text-back font-weight-bold float-left">Larkin</h3>
+                    <h2 class="h2 mb-3 text-carrot text-right">$139.99</h2>
+                  </div>
+                  <div class="form-card">
+                    <div class="row">
+                      <div class="col-md-12 mb-4">
+                    <div id="wapper">
+                      <div class="style1">
+                        <div class="a-dropdown">
+                          <select name="dropdown" id="dropdown" class="a-dropdown__select">
+                            <option value="" disabled selected hidden>Select Your Options</option>
+                              <option value="0">No Options</option>
+                              <option value="2">$10 -Screen protection</option>
+                              <option value="3">$40 -photocromic</option>
+                              <option value="4">$35 Polarized tint</option>
+                            </select>
+                          <svg data-v-7e3f3806="" class="a-dropdown__arrow icon icon-chevron" version="1.1" role="presentation" width="10.714285714285714" height="10.714285714285714" viewBox="0 0 1200 1200" class="arrow-down-icon svg-icon active"><path d="M0,125.407l600,949.186l600-949.186H0z" stroke="transparent"></path></svg>
+                           </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-md-12 mb-4">
+                    <div class="style1">
+                      <div class="a-dropdown">
+                        <select name="dropdown" id="dropdown" class="a-dropdown__select">
+                          <option value="0">Extra thin lens</option>
+                          <option value="2">No Extra thin</option>
+                          <option value="3">$25 Extra thin Options</option>
+                        </select>
+                        <svg data-v-7e3f3806="" class="a-dropdown__arrow icon icon-chevron" version="1.1" role="presentation" width="10.714285714285714" height="10.714285714285714" viewBox="0 0 1200 1200" class="arrow-down-icon svg-icon active"><path d="M0,125.407l600,949.186l600-949.186H0z" stroke="transparent"></path></svg>
+                      </div>
+                    </div>
+                  </div>
+               
+                  </div>
+                  <div class="back-button">
+                     <!-- <button type="button" class="action-button previous previous_button">Back</button> -->
+                  </div>
+                  <input type="button" name="Validate" class="next action-button" value="Go to cheakout" />
+                   </div> 
+                </fieldset>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    
+
+<!-- ================fram-desing start================== -->
+<!-- ================fram-desing start================== -->
+<section class="some-add text-center">
+  <div class="container-fluid">
+    <div class="dami-text2 text-center">
+      <h1>You Will Also Like!</h1>
+    </div>
+    <div class="row">
+      <div class="col-md-3 col-sm-3 col-12">
+        <div class="main-cfy-box">
+          <div class="prduct-sort">
+            <img src="assets/images/eyeglass4.png" alt="">
+          </div>
+          <div class="product-contnt content2">
+             <p>Portland Marble</p>
+            <span>£39.99</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-3 col-sm-3 col-12">
+        <div class="main-cfy-box">
+          <div class="prduct-sort">
+            <img src="assets/images/eyeglass3.png" alt="">
+          </div>
+          <div class="product-contnt content2">
+             <p>Twinkle</p>
+            <span>£29.99</span>
+          </div>
+        </div>
+      </div>
+      
+      <div class="col-md-3 col-sm-3 col-12">
+        <div class="main-cfy-box">
+          <div class="prduct-sort">
+            <img src="assets/images/eyeglass5.png" alt="">
+          </div>
+          <div class="product-contnt content2">
+             <p>Lautrec</p>
+            <span>£34.99</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-3 col-sm-3 col-12">
+        <div class="main-cfy-box">
+          <div class="prduct-sort">
+            <img src="assets/images/eyeglass2.png" alt="">
+          </div>
+          <div class="product-contnt content2">
+             <p>Roy</p>
+            <span>£29.99</span>
+          </div>
+        </div>
+      </div>
+      
+    </div>
+    
+  </div>
+</section>
+{% endblock %}
